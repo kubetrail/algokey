@@ -11,7 +11,6 @@ import (
 
 	"github.com/algorand/go-algorand-sdk/crypto"
 	"github.com/algorand/go-algorand-sdk/types"
-
 	"github.com/kubetrail/algokey/pkg/flags"
 	"github.com/kubetrail/bip32/pkg/keys"
 	"github.com/kubetrail/bip39/pkg/prompts"
