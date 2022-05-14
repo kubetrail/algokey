@@ -30,12 +30,13 @@ patient board palm abandon right sort find blood grace sweet vote load action ba
 ```bash
 algokey gen
 ```
-```text
+```yaml
 Enter mnemonic: patient board palm abandon right sort find blood grace sweet vote load action bag trash calm burden glow phrase shoot frog vacant elegant tourist
 seed: 83302d7a03b461c84f9c8b80ddc2b5c9f46323b567b8aa9b92c82d2b710abd4a
 prv: 83302d7a03b461c84f9c8b80ddc2b5c9f46323b567b8aa9b92c82d2b710abd4aeb368d172b549116b3fd4d770d3268368ab714a8e07cde4b609a63edf0800955
 pub: eb368d172b549116b3fd4d770d3268368ab714a8e07cde4b609a63edf0800955
 addr: 5M3I2FZLKSIRNM75JV3Q2MTIG2FLOFFI4B6N4S3ATJR634EABFK2X3R5I4
+keyType: ed25519
 ```
 
 > Please note that this tool does not currently support 25 word mnemonic
@@ -50,7 +51,7 @@ Keys can be additionally protected using a passphrase:
 ```bash
 algokey gen --use-passphrase
 ```
-```text
+```yaml
 Enter mnemonic: patient board palm abandon right sort find blood grace sweet vote load action bag trash calm burden glow phrase shoot frog vacant elegant tourist
 Enter secret passphrase: 
 Enter secret passphrase again: 
@@ -58,6 +59,7 @@ seed: e393f67697aecc395a187f44439113a7ad8368407c6268b9d1f7cef15f8b01d4
 prv: e393f67697aecc395a187f44439113a7ad8368407c6268b9d1f7cef15f8b01d4ebdf068402c9d15ab2ad2c24510ced7999d0e1806c865bb4d845685daadc8538
 pub: ebdf068402c9d15ab2ad2c24510ced7999d0e1806c865bb4d845685daadc8538
 addr: 5PPQNBACZHIVVMVNFQSFCDHNPGM5BYMANSDFXNGYIVUF3KW4QU4B7GRF74
+keyType: ed25519
 ```
 
 Mnemonic is validated and expected to comply to `BIP-39` standard.
@@ -81,17 +83,20 @@ seed: 83302d7a03b461c84f9c8b80ddc2b5c9f46323b567b8aa9b92c82d2b710abd4a
 prv: 83302d7a03b461c84f9c8b80ddc2b5c9f46323b567b8aa9b92c82d2b710abd4aeb368d172b549116b3fd4d770d3268368ab714a8e07cde4b609a63edf0800955
 pub: eb368d172b549116b3fd4d770d3268368ab714a8e07cde4b609a63edf0800955
 addr: 5M3I2FZLKSIRNM75JV3Q2MTIG2FLOFFI4B6N4S3ATJR634EABFK2X3R5I4
+keyType: ed25519
 ```
 
 However, an arbitrary mnemonic can be used by switching off validation
 
 ```bash
-algokey gen --skip-mnemonic-validation
+algokey gen --skip-mnemonic-validation this is an invalid mnemonic
 ```
-```text
-Enter mnemonic: this is an invalid mnemonic
-pub: 0xc1541003D25C206873F5c28Ea684E1072026FC9A
-prv: fc30faae343aba4a5151a56881e9c4ff332563fa8eedda661a7681db4ea604bb
+```yaml
+seed: bb06e6570ed0b71ac71e4feefeb3a7e2e4cf04ba80a065408150800f86583add
+prvHex: bb06e6570ed0b71ac71e4feefeb3a7e2e4cf04ba80a065408150800f86583add62b64e5e811314c1f6b423ab07a2216929df479417ee0bba2d71050522b442a7
+pubHex: 62b64e5e811314c1f6b423ab07a2216929df479417ee0bba2d71050522b442a7
+addr: MK3E4XUBCMKMD5VUEOVQPIRBNEU56R4UC7XAXORNOECQKIVUIKT2A6YPPI
+keyType: ed25519
 ```
 
 > It is a good practice to use valid mnemonics and also enter them

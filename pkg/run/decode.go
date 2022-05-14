@@ -83,20 +83,11 @@ func Decode(cmd *cobra.Command, args []string) error {
 
 	copy(account.Address[:], account.PublicKey)
 
-	outPrv := fmt.Sprintf("%s", hex.EncodeToString(account.PrivateKey))
-	outPub := fmt.Sprintf("%s", hex.EncodeToString(account.PublicKey))
-
-	type output struct {
-		Seed string `json:"seed,omitempty" yaml:"seed,omitempty"`
-		Prv  string `json:"prv,omitempty" yaml:"prv,omitempty"`
-		Pub  string `json:"pub,omitempty" yaml:"pub,omitempty"`
-		Addr string `json:"addr,omitempty" yaml:"addr,omitempty"`
-	}
-
 	out := &output{
-		Prv:  outPrv,
-		Pub:  outPub,
-		Addr: account.Address.String(),
+		PrvHex:  hex.EncodeToString(account.PrivateKey),
+		PubHex:  hex.EncodeToString(account.PublicKey),
+		Addr:    account.Address.String(),
+		KeyType: keyType,
 	}
 
 	switch strings.ToLower(persistentFlags.OutputFormat) {
