@@ -23,11 +23,12 @@ const (
 )
 
 type output struct {
-	Seed    string `json:"seed,omitempty" yaml:"seed,omitempty"`
-	PrvHex  string `json:"prvHex,omitempty" yaml:"prvHex,omitempty"`
-	PubHex  string `json:"pubHex,omitempty" yaml:"pubHex,omitempty"`
-	Addr    string `json:"addr,omitempty" yaml:"addr,omitempty"`
-	KeyType string `json:"keyType,omitempty" yaml:"keyType,omitempty"`
+	Mnemonic string `json:"mnemonic,omitempty" yaml:"mnemonic,omitempty"`
+	Seed     string `json:"seed,omitempty" yaml:"seed,omitempty"`
+	PrvHex   string `json:"prvHex,omitempty" yaml:"prvHex,omitempty"`
+	PubHex   string `json:"pubHex,omitempty" yaml:"pubHex,omitempty"`
+	Addr     string `json:"addr,omitempty" yaml:"addr,omitempty"`
+	KeyType  string `json:"keyType,omitempty" yaml:"keyType,omitempty"`
 }
 
 func Gen(cmd *cobra.Command, args []string) error {
