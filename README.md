@@ -141,3 +141,9 @@ verified: true
 * https://medium.com/@robbiehanson15/the-math-behind-bip-32-child-key-derivation-7d85f61a6681
 * https://nbeguier.medium.com/a-real-world-comparison-of-the-ssh-key-algorithms-b26b0b31bfd9
 * http://safecurves.cr.yp.to/
+
+Algorand patents:
+* [US20200304314A1](https://patentimages.storage.googleapis.com/3a/39/e3/f92278f1be4748/US20200304314A1.pdf)
+* [US20200396059A1](https://patentimages.storage.googleapis.com/dc/f7/9a/65f9285dce3727/US20200396059A1.pdf)
+* [WO2020247694A1](https://patentimages.storage.googleapis.com/88/98/2b/d54f810bfc6b6e/WO2020247694A1.pdf)
+* [AU2017260013A1](https://patentimages.storage.googleapis.com/94/6d/3b/411df781420e27/AU2017260013A1.pdf)
