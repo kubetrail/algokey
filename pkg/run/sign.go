@@ -45,6 +45,20 @@ func Sign(cmd *cobra.Command, args []string) error {
 		}
 	}
 
+	if len(hash) == 0 {
+		if prompt {
+			if prompt {
+				if _, err := fmt.Fprintf(cmd.OutOrStdout(), "Enter hash: "); err != nil {
+					return fmt.Errorf("failed to write to output: %w", err)
+				}
+			}
+			hash, err = keys.Read(cmd.InOrStdin())
+			if err != nil {
+				return fmt.Errorf("failed to read hash input: %w", err)
+			}
+		}
+	}
+
 	keyBytes, err := hex.DecodeString(key)
 	if err != nil {
 		return fmt.Errorf("failed to decode key as hex string: %w", err)
