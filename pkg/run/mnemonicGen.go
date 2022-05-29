@@ -36,13 +36,13 @@ func MnemonicGen(cmd *cobra.Command, args []string) error {
 	if len(key) == 0 {
 		if len(args) == 0 {
 			if prompt {
-				if _, err := fmt.Fprintf(cmd.OutOrStdout(), "Enter pub key: "); err != nil {
+				if _, err := fmt.Fprintf(cmd.OutOrStdout(), "Enter seed key in hex: "); err != nil {
 					return fmt.Errorf("failed to write to output: %w", err)
 				}
 			}
 			key, err = keys.Read(cmd.InOrStdin())
 			if err != nil {
-				return fmt.Errorf("failed to read pub key from input: %w", err)
+				return fmt.Errorf("failed to read seed from input: %w", err)
 			}
 		} else {
 			key = args[0]
